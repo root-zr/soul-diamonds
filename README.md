@@ -6,12 +6,27 @@
 #### 软件架构
 软件架构说明
 
+## Project setup
 
-#### 安装教程
+```
+npm install
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+### Compiles and hot-reloads for development
+
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+
+```
+npm run build
+```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
 
 #### 使用说明
 
