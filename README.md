@@ -28,6 +28,20 @@ npm run build
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+###  安装element-ui 
+
+```
+npm install element-ui --save
+```
+
+### 安装axios
+
+```
+npm install axios --save
+```
+
+
+
 #### 使用说明
 
 1.  xxxx
