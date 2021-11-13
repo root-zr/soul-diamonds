@@ -3,7 +3,10 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
-import Header from '../components/Header.vue'
+import Issue from '../views/Issue.vue'
+import Launch from "../views/Launch";
+import Query from "../views/Query";
+
 
 Vue.use(VueRouter)
 
@@ -11,8 +14,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: '/home'
   },
 
   {
@@ -28,9 +30,19 @@ const routes = [
     component: Login
   },
 
+
   {
-    path: '/header',
-    component: Header
+    path: '/issue',
+    component: Issue
+  },
+  {
+    path: '/launch',
+    component: Launch
+  },
+
+  {
+    path: '/query',
+    component: Query
   },
 
   {

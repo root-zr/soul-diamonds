@@ -19,7 +19,7 @@
           <el-input v-model="form.userId"></el-input>
         </el-form-item>
         <el-form-item label="验证码" prop='checkid'>
-          <el-input v-model="form.checkid" placeholder="请输入验证码" style="width:182px"></el-input>
+          <el-input v-model="form.checkid" placeholder="请输入验证码" style="width:200px"></el-input>
           <el-button @click="getVertifyCode" type="primary" plain>获取验证码</el-button>
         </el-form-item>
         <el-form-item label="用户名称" prop="username">

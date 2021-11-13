@@ -1,0 +1,48 @@
+/*normalize.css是对整体的css进行规范化，项目的基本css是base.css*/
+@import "normalize.css";
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Microsoft YaHei, serif;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0
+}
+
+/*将一些元素共同的属性定义在这里*/
+.wid160 {
+  width: 160px;
+}
+
+.wid150 {
+  width: 150px;
+}
+
+.wid100 {
+  width: 100px;
+}
+
+.blueStrip {
+  width: 4px;
+  height: 20px;
+  background: rgba(0, 70, 140, 1);
+  border-radius: 1px;
+  margin-right: 5px;
+}
+
+@font-face {
+  font-family: 宋体;
+  src: local('Simsun'), url("../fonts/simsun.ttf");
+}
+
+@font-face {
+  font-family: Arial;
+  src: local(Arial), url("../fonts/arialbd.ttf");
+}
+
