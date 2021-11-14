@@ -1,70 +1,126 @@
 <template>
-  <el-table
-          :data="tableData"
-          style="width: 100%"
-          :default-sort = "{prop: 'date', order: 'descending'}"
-          align="center"
-  >
-    <el-table-column
-            prop="date"
-            label="日期"
-            sortable
-            width="180">
-    </el-table-column>
-    <el-table-column
-            prop="nameFrom"
-            label="发起人"
-            sortable
-            width="180">
-    </el-table-column>
-    <el-table-column
-            prop="nameTo"
-            label="发起人伴侣"
-            :formatter="formatter">
-    </el-table-column>
 
-    <el-table-column
-            align="right">
-      <template slot="header" slot-scope="scope">
-        <el-input
-                v-model="search"
-                size="mini"
-                placeholder="输入关键字搜索"/>
-      </template>
-    </el-table-column>
-  </el-table>
+  <div>
+<!--    <QueryById></QueryById>-->
+    <div>
+      <el-form :inline="true" :model="formInline" class="demo-form-inline" align="center">
+        <br/><br/><br/><br/>
+        <el-form-item label="订单发起人">
+          <el-input v-model="formInline.user" placeholder="请输入发起人编号"></el-input>
+        </el-form-item>
+
+        <el-form-item>
+          <el-col :span="12"><el-button type="primary" @click="onSubmit">查询</el-button></el-col>
+        </el-form-item>
+      </el-form>
+
+      <h3>查询结果</h3>
+
+    </div>
+
+    <el-table
+            :data="tableData"
+            style="width: 100%"
+            :default-sort = "{prop: 'date', order: 'descending'}"
+            align="center"
+    >
+      <el-table-column
+              prop="dateToString"
+              label="日期"
+              sortable
+              width="180">
+      </el-table-column>
+      <el-table-column
+              prop="nameFrom"
+              label="发起人"
+              sortable
+              width="180">
+      </el-table-column>
+      <el-table-column
+              prop="nameTo"
+              label="发起人伴侣"
+              :formatter="formatter">
+      </el-table-column>
+
+      <el-table-column
+              align="right">
+        <template slot="header" slot-scope="scope">
+          <el-input
+                  v-model="search"
+                  size="mini"
+                  placeholder="输入关键字搜索"/>
+        </template>
+      </el-table-column>
+    </el-table>
+
+  </div>
+
 
 </template>
 
+
+
 <script>
+  import QueryById from "../views/QueryById.vue";
+
   export default {
+    name:"Query",
+    components:{
+      QueryById
+    },
     data() {
       return {
-
+        id:'',
         search: '',
+        formInline: {
+          user: '',
+        },
         tableData: [{
-          date: '2016-05-02',
+          dateToString: '2016-05-02',
           nameFrom: '111111111',
           nameTo: '2222222'
         }, {
-          date: '2016-05-04',
+          dateToString: '2016-05-04',
           nameFrom: '1111111',
           nameTo: '11111111'
         }, {
-          date: '2016-05-01',
+          dateToString: '2016-05-01',
           nameFrom: '王小虎',
           nameTo: '上海市普陀区金沙江路 1519 弄'
         }, {
-          date: '2016-05-03',
+          dateToString: '2016-05-03',
           nameFrom: '王小虎',
           nameTo: '上海市普陀区金沙江路 1516 弄'
         }]
       }
     },
+
     methods: {
+
       formatter(row, column) {
         return row.nameTo;
+      },
+
+      getInfo(id){
+
+        this.$axios.get("/query/" + id).then((res) => {
+          this.tableData = res.data.data;
+        });
+      },
+
+      onSubmit() {
+        this.getInfo(this.formInline.user);
       }
-    }
+
+    },
+
+    created() {
+       this.id = this.$store.getters.getUser.id;
+       this.getInfo(this.id);
+    },
+
+
+
+
   }
 </script>

@@ -6,7 +6,7 @@ import Register from '../views/Register.vue'
 import Issue from '../views/Issue.vue'
 import Launch from "../views/Launch";
 import Query from "../views/Query";
-
+import QueryById from "../views/QueryById";
 
 Vue.use(VueRouter)
 
@@ -43,6 +43,11 @@ const routes = [
   {
     path: '/query',
     component: Query
+  },
+
+  {
+    path: '/queryById',
+    component: QueryById
   },
 
   {
