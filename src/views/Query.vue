@@ -103,13 +103,16 @@
 
       getInfo(id){
 
-        this.$axios.get("/query/" + id).then((res) => {
+        this.$axios.get("/queryAll").then((res) => {
           this.tableData = res.data.data;
         });
       },
 
+
       onSubmit() {
-        this.getInfo(this.formInline.user);
+        this.$axios.get("/query/" + this.formInline.user).then((res) => {
+          this.tableData = res.data.data;
+        });
       }
 
     },
