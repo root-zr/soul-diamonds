@@ -80,13 +80,18 @@
 
     created() {
 
-      if (window.sessionStorage.getItem("userInfo") !== ""){
-        // this.$store.getters.getUser.username 从jwt获取用户信息
-        this.hasLogin = true
-      }
+      // if (window.sessionStorage.getItem("userInfo") !== ""){
+      //   // this.$store.getters.getUser.username 从jwt获取用户信息
+      //   this.hasLogin = true
+      // }
+      //
+      //
+      // if (window.sessionStorage.getItem("userInfo") === ""){
+      //   this.hasLogin = false
+      // }
 
-      if (window.sessionStorage.getItem("userInfo") == ""){
-        this.hasLogin = false
+      if (this.$store.getters.getUser.username !== ""){
+         this.hasLogin = true
       }
     },
 

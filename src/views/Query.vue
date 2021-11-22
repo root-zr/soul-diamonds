@@ -76,14 +76,6 @@
           user: '',
         },
         tableData: [{
-          dateToString: '2016-05-02',
-          nameFrom: '111111111',
-          nameTo: '2222222'
-        }, {
-          dateToString: '2016-05-04',
-          nameFrom: '1111111',
-          nameTo: '11111111'
-        }, {
           dateToString: '2016-05-01',
           nameFrom: '王小虎',
           nameTo: '上海市普陀区金沙江路 1519 弄'
