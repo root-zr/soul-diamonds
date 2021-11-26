@@ -17,7 +17,7 @@
       </div>
 
       <div class="temp">
-        <navigation-item class="navigation-item" path="/issue"><span>ISSUE</span></navigation-item>
+        <navigation-item class="navigation-item" path="/issue"><span>评论区</span></navigation-item>
         <div style="height: 2px" :class="{'active': this.$route.path==='/issue'}"></div>
       </div>
 
@@ -75,7 +75,8 @@
 
     data:{
       username:"",
-      hasLogin: false
+      hasLogin: false,
+      intervalId:null
     },
 
     created() {
@@ -90,16 +91,38 @@
       //   this.hasLogin = false
       // }
 
-      if (this.$store.getters.getUser.username !== ""){
-         this.hasLogin = true
-      }
+      this.dataRefreh();
     },
 
     methods:{
       logout() {
         window.sessionStorage.clear(); //清除session
+
+        // 在页面销毁后，清除计时器
+        this.clear();
+
         this.$store.commit("REMOVE_INFO");
         this.hasLogin = false
+      },
+      // 定时刷新数据函数
+      dataRefreh() {
+        // 计时器正在进行中，退出函数
+        if (this.intervalId != null) {
+          return;
+        }
+        // 计时器为空，操作
+        this.intervalId = setInterval(() => {
+          // console.log("刷新" + new Date());
+          // this.initData(); //加载数据函数
+          if (window.sessionStorage.getItem("userInfo") !== ""){
+            this.hasLogin = true
+          }
+        }, 2000);
+      },
+      // 停止定时器
+      clear() {
+        clearInterval(this.intervalId); //清除计时器
+        this.intervalId = null; //设置为null
       },
     }
 

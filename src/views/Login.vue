@@ -111,6 +111,7 @@
             console.log(_this.$store.getters.getUser);
 
             this.$router.push("/");
+            //this.$router.push("/navigationBar")
             this.$message.success("登陆成功！");
           });
           this.loginForm.userId=''

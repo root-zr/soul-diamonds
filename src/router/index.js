@@ -7,6 +7,10 @@ import Issue from '../views/Issue.vue'
 import Launch from "../views/Launch";
 import Query from "../views/Query";
 import QueryById from "../views/QueryById";
+import ReviewEdit from "../views/ReviewEdit";
+import ReviewDetail from "../views/ReviewDetail";
+import Reviews from "../views/Reviews";
+import NavigationBar from "../components/common/NavigationBar";
 
 Vue.use(VueRouter)
 
@@ -35,9 +39,31 @@ const routes = [
     path: '/issue',
     component: Issue
   },
+
+  {
+    path: '/navigationBar',
+    component: NavigationBar
+  },
+
+
   {
     path: '/launch',
     component: Launch
+  },
+
+  {
+    path: '/reviewEdit',
+    component: ReviewEdit
+  },
+
+  {
+    path: '/reviewDetail',
+    component: ReviewDetail
+  },
+
+  {
+    path: '/reviews',
+    component: Reviews
   },
 
   {
