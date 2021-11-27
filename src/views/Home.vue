@@ -80,21 +80,24 @@
 
                     <div class="link">
                         <div class="blueStrip1"></div>
-                        <a href="http://bigd.big.ac.cn/ncov/">National Genomics Data Center</a>
+                        <a href="http://fanque.supplyjewel.com/">FANQUE 钻石订购平台</a>
                     </div>
 
                     <div class="link">
                         <div class="blueStrip1"></div>
-                        <a href="https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge"
-                           target="_blank">Kaggle</a>
+                        <a href="https://www.bluenile.com/cn/diamonds?utm_source=baidu&click_id=937765787&utm_medium=cpc&utm_campaign=SC_PCDY_Diamond&utm_term=%E9%92%BB%E7%9F%B3%E7%BD%91%E8%B4%AD"
+                           target="_blank">blue line 钻石网购</a>
                     </div>
 
                     <div class="link">
                         <div class="blueStrip1"></div>
-                        <a href="http://news.sciencenet.cn/htmlnews/2020/3/437095.shtm" target="_blank">科学网</a>
+                        <a href="https://4cs.gia.edu/zh-cn/%E9%92%BB%E7%9F%B3%E8%B4%AD%E4%B9%B0%E6%8C%87%E5%8D%97/?utm_source=N377807.115044Baidu&utm_medium=cpc&utm_campaign=USIM_GIA_CHINA_Q4_2021&renqun_youhua=1998271" target="_blank">GIA钻石鉴定</a>
                     </div>
 
-
+                    <div class="link">
+                        <div class="blueStrip1"></div>
+                        <a href="https://www.jd.com/book/6144a9d032a3399f5708.html?page=2" target="_blank">京东钻石预定网站</a>
+                    </div>
                 </div>
             </div>
 
@@ -104,12 +107,24 @@
 
                     <div class="link">
                         <div class="blueStrip1"></div>
-                        <a href="https://www.covidvisualizer.com" target="_blank">Covid 3d Visualize</a>
+                        <a href="https://www.fabfile.org/" target="_blank">Fabric 官网</a>
                     </div>
                     <div class="link">
                         <div class="blueStrip1"></div>
-                        <a href="https://documenter.getpostman.com/view/1794236/SzYW2f4S?version=latest"
-                           target="_blank">getpostman.com</a>
+                        <a href="https://fabric-chs.readthedocs.io/zh_CN/chs/"
+                           target="_blank">fabric 中文文档</a>
+                    </div>
+
+                    <div class="link">
+                        <div class="blueStrip1"></div>
+                        <a href="https://asiablockchainfoundation.org/"
+                           target="_blank">亚洲区块链基金会</a>
+                    </div>
+
+                    <div class="link">
+                        <div class="blueStrip1"></div>
+                        <a href="https://www.hyperledger.org/"
+                           target="_blank">hyperledger官网</a>
                     </div>
 
 
