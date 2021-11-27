@@ -25,100 +25,34 @@
                 <br/><br/> <br/><br/>
 
                 <el-descriptions :column="3" border>
-                    <el-descriptions-item label="商品类别1" label-class-name="my-label" content-class-name="my-content">
-                        <img src="../assets/img/display1.jpg"
-                             style="vertical-align: bottom; width: 50%; min-width: 150px">
-                    </el-descriptions-item>
-                    <el-descriptions-item label="商品类别2" label-class-name="my-label" content-class-name="my-content">
-                        <img src="../assets/img/display2.jpg"
-                             style="vertical-align: bottom; width: 50%; min-width: 150px">
-                    </el-descriptions-item>
-                    <el-descriptions-item label="商品类别3">
-                        <img src="../assets/img/display3.jpg"
-                             style="vertical-align: bottom; width: 50%; min-width: 150px">
-                    </el-descriptions-item>
-                    <el-descriptions-item label="商品描述">
-                        <el-tag size="medium">价格 1000</el-tag>
-                        <el-tag size="medium">当前订购量 100份</el-tag>
-                        <el-button type="text" @click="dialogVisible = true"> &nbsp&nbsp&nbsp 立刻订购</el-button>
+                    <el-descriptions-item label-class-name="my-label" content-class-name="my-content"
+                                          v-for="good in goods" :key="good.goodsId" :label="good.description">
 
-                      <el-dialog
-                              title="提示"
-                              :visible.sync="dialogVisible"
-                              width="30%"
-                              :before-close="handleClose">
-                        <span>请到发布页面下单！</span>
-                        <span slot="footer" class="dialog-footer">
-                            <el-button @click="dialogVisible = false">取 消</el-button>
-                            <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
-                        </span>
-                      </el-dialog>
-                    </el-descriptions-item>
+                        <el-card :body-style="{ padding: '0px', marginBottom: '1px'}">
+                            <img
+                                    :src="require('../assets/img/'+ good.photo)"
+                                    class="image"
+                            />
+                            <div style="padding: 14px;">
+                                <el-tag size="medium">价格 {{good.price}}</el-tag>
+                                <el-tag size="medium">当前订购量 {{good.number}}份</el-tag>
+                                <el-button type="text" @click="dialogVisible = true">立刻订购</el-button>
 
+                                <el-dialog
+                                        title="提示"
+                                        :visible.sync="dialogVisible"
+                                        width="30%"
+                                        :before-close="handleClose">
+                                    <span>请到发布页面下单！</span>
+                                    <span slot="footer" class="dialog-footer">
+                                        <el-button @click="dialogVisible = false">取 消</el-button>
+                                        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+                                   </span>
+                                </el-dialog>
 
-                    <el-descriptions-item label="商品描述">
-                        <el-tag size="medium">价格 2000</el-tag>
-                        <el-tag size="medium">当前订购量 100份</el-tag>
-                    </el-descriptions-item>
+                            </div>
+                        </el-card>
 
-                    <el-descriptions-item label="商品描述">
-                        <el-tag size="medium">价格 3000</el-tag>
-                        <el-tag size="medium">当前订购量 100份</el-tag>
-                    </el-descriptions-item>
-
-                    <el-descriptions-item label="商品类别4" style="background:#7d7df3;content-class-name:#3ef343">
-                        <img src="../assets/img/display4.jpg"
-                             style="vertical-align: bottom; width: 50%; min-width: 150px">
-                    </el-descriptions-item>
-                    <el-descriptions-item label="商品类别5">
-                        <img src="../assets/img/display5.jpg"
-                             style="vertical-align: bottom; width: 50%; min-width: 150px">
-                    </el-descriptions-item>
-                    <el-descriptions-item label="商品类别6">
-                        <img src="../assets/img/display6.jpg"
-                             style="vertical-align: bottom; width: 50%; min-width: 150px">
-                    </el-descriptions-item>
-                    <el-descriptions-item label="商品描述">
-                        <el-tag size="medium">价格 1000</el-tag>
-                        <el-tag size="medium">当前订购量 100份</el-tag>
-                    </el-descriptions-item>
-
-                    <el-descriptions-item label="商品描述">
-                        <el-tag size="medium">价格 2000</el-tag>
-                        <el-tag size="medium">当前订购量 100份</el-tag>
-                    </el-descriptions-item>
-
-                    <el-descriptions-item label="商品描述">
-                        <el-tag size="medium">价格 3000</el-tag>
-                        <el-tag size="medium">当前订购量 100份</el-tag>
-                    </el-descriptions-item>
-
-
-                    <el-descriptions-item label="商品类别7" style="background:#dff3d4;content-class-name=#dff3d4">
-                        <img src="../assets/img/display7.jpg"
-                             style="vertical-align: bottom; width: 50%; min-width: 150px">
-                    </el-descriptions-item>
-                    <el-descriptions-item label="商品类别8">
-                        <img src="../assets/img/display8.jpg"
-                             style="vertical-align: bottom; width: 50%; min-width: 150px">
-                    </el-descriptions-item>
-                    <el-descriptions-item label="商品类别9">
-                        <img src="../assets/img/display9.jpg"
-                             style="vertical-align: bottom; width: 50%; min-width: 150px">
-                    </el-descriptions-item>
-                    <el-descriptions-item label="商品描述">
-                        <el-tag size="medium">价格 1000</el-tag>
-                        <el-tag size="medium">当前订购量 100份</el-tag>
-                    </el-descriptions-item>
-
-                    <el-descriptions-item label="商品描述">
-                        <el-tag size="medium">价格 2000</el-tag>
-                        <el-tag size="medium">当前订购量 100份</el-tag>
-                    </el-descriptions-item>
-
-                    <el-descriptions-item label="商品描述">
-                        <el-tag size="medium">价格 3000</el-tag>
-                        <el-tag size="medium">当前订购量 100份</el-tag>
                     </el-descriptions-item>
 
                 </el-descriptions>
@@ -214,7 +148,15 @@
                 passRate: 0.767,
                 excellentNum: 10,
                 pass: 14,
-                unPass: 6
+                unPass: 6,
+                goods: [{
+                    description: "商品类别",
+                    price: "1000",
+                    photo: require("../assets/img/diamond-soul1.jpg"),
+                    number: "100",
+                    goodsId: "1"
+                }],
+
             }
         },
         methods: {
@@ -225,10 +167,20 @@
                     })
                     .catch(_ => {
                     });
-            }
+            },
+
+            getInfo() {
+
+                this.$axios.get("/goods/getInfo").then(res => {
+
+                    // this.$message.success(res.data.data);
+                    this.goods = res.data.data
+
+                })
+            },
         },
         created() {
-
+            this.getInfo();
         },
         mounted() {
             this.$http.get('/statistics/').then(res => {

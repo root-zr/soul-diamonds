@@ -56,7 +56,7 @@
           this.tableData = res.data.data
 
           var tableDa = this.tableData
-          this.$message.success( this.tableData);
+          // this.$message.success( this.tableData);
           this.$router.push({
             path:'/query',
             name:'Query',

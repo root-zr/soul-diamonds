@@ -11,6 +11,7 @@ import ReviewEdit from "../views/ReviewEdit";
 import ReviewDetail from "../views/ReviewDetail";
 import Reviews from "../views/Reviews";
 import NavigationBar from "../components/common/NavigationBar";
+import Test from "../views/Test";
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,10 @@ const routes = [
   {
     path: '/login',
     component: Login
+  },
+  {
+    path: '/test',
+    component: Test
   },
 
 

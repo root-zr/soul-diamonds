@@ -43,6 +43,12 @@
       </el-table-column>
 
       <el-table-column
+              prop="goodsId"
+              label="商品型号"
+              :formatter="formatter">
+      </el-table-column>
+
+      <el-table-column
               align="right">
         <template slot="header" slot-scope="scope">
           <el-input
@@ -76,13 +82,10 @@
           user: '',
         },
         tableData: [{
-          dateToString: '2016-05-01',
-          nameFrom: '王小虎',
-          nameTo: '上海市普陀区金沙江路 1519 弄'
-        }, {
-          dateToString: '2016-05-03',
-          nameFrom: '王小虎',
-          nameTo: '上海市普陀区金沙江路 1516 弄'
+          dateToString: '',
+          nameFrom: '',
+          nameTo: '',
+          goodsId:''
         }]
       }
     },

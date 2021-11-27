@@ -19,6 +19,10 @@
                 ></el-date-picker>
             </el-col>
         </el-form-item>
+
+        <el-form-item label="商品型号" prop="companyIdTo">
+            <el-input v-model="receiptForm.goodsId"></el-input>
+        </el-form-item>
         <el-form-item>
             <el-button type="primary" @click="submitForm('receiptForm')"
             >确认</el-button
@@ -39,6 +43,7 @@
                     nameFrom: "",
                     nameTo: "",
                     dateToString: "",
+                    goodsId:""
                 },
 
             };
@@ -52,6 +57,7 @@
             resetForm() {
                 this.receiptForm.nameTo = "";
                 this.receiptForm.dateToString = "";
+                this.receiptForm.goodsId = "";
                 this.$refs.receiptForm.resetFields();
             },
         },
