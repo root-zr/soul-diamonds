@@ -28,10 +28,11 @@
                     <el-descriptions-item label-class-name="my-label" content-class-name="my-content"
                                           v-for="good in goods" :key="good.goodsId" :label="good.description">
 
-                        <el-card :body-style="{ padding: '0px', marginBottom: '1px'}">
+                        <el-card :body-style="{ padding: '0px', marginBottom: '1px'}" >
                             <img
                                     :src="require('../assets/img/'+ good.photo)"
                                     class="image"
+                                    height="200px"
                             />
                             <div style="padding: 14px;">
                                 <el-tag size="medium">价格 {{good.price}}</el-tag>
