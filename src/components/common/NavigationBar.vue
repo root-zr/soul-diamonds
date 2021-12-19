@@ -8,12 +8,12 @@
 
       <div class="temp">
         <navigation-item class="navigation-item" path="/launch"><span>发布信息</span></navigation-item>
-        <div style="height: 2px" :class="{'active': this.$store.path==='/launch'}"></div>
+        <div style="height: 2px" :class="{'active': this.$route.path==='/launch'}"></div>
       </div>
 
       <div class="temp">
         <navigation-item class="navigation-item" path="/query"><span>查看全部订单</span></navigation-item>
-        <div style="height: 2px" :class="{'active': this.$store.path==='/query'}"></div>
+        <div style="height: 2px" :class="{'active': this.$route.path==='/query'}"></div>
       </div>
 
       <div class="temp">

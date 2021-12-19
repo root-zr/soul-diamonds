@@ -45,7 +45,7 @@
       <el-table-column
               prop="goodsId"
               label="商品型号"
-              :formatter="formatter">
+              width="180">
       </el-table-column>
 
       <el-table-column
@@ -82,10 +82,10 @@
           user: '',
         },
         tableData: [{
+          goodsId:'',
           dateToString: '',
           nameFrom: '',
-          nameTo: '',
-          goodsId:''
+          nameTo: ''
         }]
       }
     },
@@ -96,7 +96,7 @@
         return row.nameTo;
       },
 
-      getInfo(id){
+      getInfo(){
 
         this.$axios.get("/queryAll").then((res) => {
           this.tableData = res.data.data;
@@ -107,6 +107,7 @@
       onSubmit() {
         this.$axios.get("/query/" + this.formInline.user).then((res) => {
           this.tableData = res.data.data;
+
         });
       }
 
