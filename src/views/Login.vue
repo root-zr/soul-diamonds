@@ -62,8 +62,8 @@
       return {
         //表单数据
         loginForm: {
-          userId: "15390526991",
-          password: "123456",
+          userId: "",
+          password: "",
         },
         //验证对象：校验规则
         loginRules: {
